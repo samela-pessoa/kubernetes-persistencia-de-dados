@@ -1,16 +1,28 @@
-# Persistência de dados com pods kubernetes no provider GCP
+# Persistência de dados com pods kubernetes no provider Google Cloud Platform(GCP)
 
- > Explicação: pods kurbernetes são efemeros, com isso caso algum pod seja deletado, os dados dele também seram perdidos, para que isso não aconteça, realizamos uma configuração para persistência desses dados. 
+ > Explicação: pods kurbernetes são efẽmeros, com isso caso algum pod seja deletado, os dados contidos nele, também seram perdidos. Para persistência desses dados em casos de falhas ou exclusões de pod, podemos utilizar como base, os recursos e configurações descritas nesse material disponibilizado.
 
-### Requisitos necessarios:
+### Requisitos necessários na GCP:
 
-- Criar uma conta GCP.
-- Criar um disco na GCP.
-- Criar um cluster na GCP.
-- Para criação dos pods, executar os arquivos yaml no cloud shell.
+- Criar uma conta.
+- Criar um disco.
+- Criar um cluster kubernetes.
+- Para criação dos pods, executar os arquivos .yaml disponibilizados, no cloud shell.
+
+### baixando os arquivos do repositorio git e executando no cloud shell, para crianção dos pods.
+```sh
+$git clone https://github.com/samela-pessoa/pod-persistencia-dados.git
+$cd pod-persistencia-dados
+$kubectl aplly - f "nomedoarquivo.yaml"
+```
+
+### Verificando status do pvc.
+```sh
+$ kubectl get pvc
+```
 
 ### Acessando o pod, para verificar o diretorio de persistêcia de dados.
-
 ```sh
-$ kubectl exec -it pod-pv --container nginx-container  -- bash
+$ kubectl exec -it pod-pv-1 --container nginx-container  -- bash
+$ls
 ```
