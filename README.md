@@ -11,8 +11,8 @@
 
 ### baixando os arquivos do repositorio git e executando no cloud shell, para crianção dos pods.
 ```sh
-$git clone https://github.com/samela-pessoa/pod-persistencia-dados.git
-$cd pod-persistencia-dados
+$git clone https://github.com/samela-pessoa/kubernetes-persistencia-de-dados.git
+$cd kubernetes-persistencia-de-dados
 $kubectl aplly - f "nomedoarquivo.yaml"
 ```
 
