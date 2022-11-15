@@ -1,4 +1,4 @@
-# Persistência de dados com pods kubernetes, no provider Google Cloud Platform(GCP)
+# Persistência de dados com pods kubernetes, cloud GCP(Google Cloud Platform).
 
  > Explicação: pods kurbernetes são efêmeros, com isso caso algum pod seja deletado, os dados contidos nele, também seram perdidos. Para persistência desses dados em casos de falhas ou exclusões de pod, podemos utilizar como base, os recursos e configurações descritas nesse material disponibilizado.
 
