@@ -10,8 +10,7 @@ spec:
         - containerPort: 80
       volumeMounts:
         - mountPath: /volume-container
-          name: pv-1-container
-    
+          name: pv-1-container   
   volumes:
   - name: pv-1-container
     persistentVolumeClaim:
